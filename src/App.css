@@ -1,0 +1,131 @@
+@import "./aboutMeTab.css";
+@import "./skillsTab.css";
+@import "./contactMeTab.css";
+body {
+    background-color: black;
+    color: white;
+}
+header nav {
+    display: block;
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+    border-radius: 40px;
+}
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+header nav ul li {
+    list-style: none;
+    margin: 0 auto;
+}
+header nav ul li button {
+    /*border-radius: 50px;
+    border-color: blue;
+    font-size: 20px;
+    align-self: center;*/
+    border-radius: 50px;
+    border-color: white;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    align-self: center;
+}
+header nav ul li button a {
+    color: white;
+}
+a:hover {
+    color: purple;
+}
+div div div div img {
+    width: 50vw;
+    height: 50vh;
+}
+div div div div iframe {
+    width: 50vw;
+    height: 50vh;
+}
+div div div div p {
+    font-size: 18px;
+}
+.beforeTabinfo {
+    font-size: 100%;
+}
+.tab0Split {
+    /*display: grid;
+    grid-template-columns: 17% 1fr;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.helpText1 {
+    background-color: black;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: white;
+    height: 3%;
+    font-size: 100%;
+}
+.tab0SplitD {
+    width: auto;
+}
+.tab0SplitDImg {
+    height: 50vh;
+    width: 15vw;
+    margin-left: 10px;
+    margin-right: 10px;
+    /*margin: 0 auto;*/
+}
+.tab0SplitD2 {
+    width: 80vw;
+    height: 100%;
+}
+.main0 {
+    height: 100%;
+}
+.terminalImg {
+    width: 100%;
+    height: 100%;
+}
+#terminalStuff {
+    width: 100%;
+}
+@media screen and (max-width: 956px) {
+    .tab0Split {
+        flex-direction: column;
+    }
+    .tab0SplitD {
+        width: 100vw;
+    }
+    .tab0SplitDImg {
+        height: 50vh;
+        width: 30vw;
+        margin-left: 35vw;
+    }
+    .tab0SplitD2 {
+        width: 100vw;
+        height: 100%;
+    }
+    .helpText1 {
+        background-color: black;
+        color: white;
+        width: 94vw;
+        margin-left: 2vw;
+        border-radius: 10px;
+        border-width: 3px;
+        border-color: white;
+        height: 2vh;
+        font-size: 100%;
+    }
+    #terminalStuff {
+        width: 90vw;
+        margin-left: 10vw;;
+    }
+    div div div div p {
+        font-size: 1.5vw;
+    }
+}

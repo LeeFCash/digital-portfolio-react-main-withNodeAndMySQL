@@ -1,0 +1,79 @@
+@keyframes inV {
+0% {opacity: 0.0;}
+100% {opacity: 1.0;}    
+}
+.headerC {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.mainC {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    height: 100%;
+    justify-items: center;
+}
+.vIMG {
+    width: 40%;
+    height: 100%;
+}
+.mainC2 {
+    /*display: flex;
+    flex-direction: column;*/
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.cV {
+    display: flex;
+    flex-direction: row;
+    border-color: white;
+    border-width: 2%;
+    border-style: solid;
+}
+.vText {
+    font-size: 100%;
+}
+.headerCPAll {
+    margin: 0 auto;
+}
+.mainC1 {
+    margin: 0 auto;
+}
+.mainC3 {
+    /*margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;*/
+    display: grid;
+    grid-template-columns: 1fr;
+    /*width: 10%; after*/
+}
+.mainC3IMG {/*
+    position: relative;
+    bottom: 23%;
+    width: 100%;
+*/
+width: 100%;
+}
+/*.mainC3P {
+    position: relative;
+    bottom: 13%;
+}*/
+.mainCTitles {
+    text-align: center;
+}
+@media screen and (max-width: 922px) {
+    .mainC {
+        grid-template-columns: 1fr 1fr;
+    }
+    .mainC3 {
+        width: 100%;
+    }
+    .mainC {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
