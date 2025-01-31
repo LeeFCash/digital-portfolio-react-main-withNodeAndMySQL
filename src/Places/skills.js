@@ -16,6 +16,47 @@ var blogLinks = [
 'https://www.youtube.com/embed/H8eIcx-YAtE?si=Wk0M95i93yUk_9fD',
 'https://www.youtube.com/embed/gG2aYsNgx88?si=gwOREuZre98uG0FM'
 ];
+
+/*const getLinks = () => [
+  { name: "blog8", url: "www.youtube.com/embed/gG2aYsNgx88?si=gwOREuZre98uG0FM" },
+  { name: "blog7", url: "www.youtube.com/embed/H8eIcx-YAtE?si=Wk0M95i93yUk_9fD" },
+  { name: "blog6", url: "www.youtube.com/embed/L2SW84Q7L2I?si=lWbUwU7UbyHAP9M2" },
+  { name: "blog5", url: "www.youtube.com/embed/s7Ih4r3CFsE?si=JKDVSNr9f_0lhxpd" },
+  { name: "blog4", url: "www.youtube.com/embed/ryfU13Vkmls?si=yu7zO8p8D2oI3CGS" },
+  { name: "blog3", url: "www.youtube.com/embed/_WRFMGZHrGs?si=qleUhM8ltZ3EesUA" },
+  { name: "blog2", url: "www.youtube.com/embed/bSdCY3ay8Qk?si=GdEtpMNVbdo2JXCy" },
+  { name: "blog1", url: "www.youtube.com/embed/r-h2IPPMpBo?si=QYezHrv30jGCPQ29" },
+];*/
+const getLinks = [
+  { name: "blog8", url: "www.youtube.com/embed/gG2aYsNgx88?si=gwOREuZre98uG0FM" },
+  { name: "blog7", url: "www.youtube.com/embed/H8eIcx-YAtE?si=Wk0M95i93yUk_9fD" },
+  { name: "blog6", url: "www.youtube.com/embed/L2SW84Q7L2I?si=lWbUwU7UbyHAP9M2" },
+  { name: "blog5", url: "www.youtube.com/embed/s7Ih4r3CFsE?si=JKDVSNr9f_0lhxpd" },
+  { name: "blog4", url: "www.youtube.com/embed/ryfU13Vkmls?si=yu7zO8p8D2oI3CGS" },
+  { name: "blog3", url: "www.youtube.com/embed/_WRFMGZHrGs?si=qleUhM8ltZ3EesUA" },
+  { name: "blog2", url: "www.youtube.com/embed/bSdCY3ay8Qk?si=GdEtpMNVbdo2JXCy" },
+  { name: "blog1", url: "www.youtube.com/embed/r-h2IPPMpBo?si=QYezHrv30jGCPQ29" },
+];
+/*const generateLinksHTML = links =>
+  links
+    .map(
+      link => `
+        <a
+          href="${link.url}"
+          target="_blank"
+          style="display: block;">
+          ${link.name}
+        </a>
+      `
+    )
+    .join("");
+
+const renderLinks = (containerId, linksHTML) => {
+  document.getElementById(containerId).innerHTML = linksHTML;
+};
+const linksHTML = generateLinksHTML(getLinks());
+renderLinks("link-container", linksHTML);*/
+
 function blogs() {
     var blog1 = document.getElementById("blog1");
     blog1.addEventListener("click", function(){window.open('https://youtu.be/r-h2IPPMpBo?si=ve_G_GOLVm1CXINw');});
@@ -112,14 +153,7 @@ export function Skills() {
       	</section>
       	<section className="mainC2">
         	<h1 className="mainCTitles">blogs</h1>
-        	<div onClick={() => window.open(data.length > 0 ? (data[0].link_to_blog.length >= 500 ? data[0].link_to_blog.slice(0, 120) : data[0].link_to_blog) : "info not found", "_blank")} id="blog8" className="cV"><img className="vIMG" src={clickHere} alt="404"></img><p className="vText">Blog#1</p></div>
-        	<div onClick={() => window.open(data.length > 0 ? (data[0].link_to_blog.length >= 500 ? data[0].link_to_blog.slice(0, 120) : data[0].link_to_blog) : "info not found", "_blank")} id="blog8" className="cV"><img className="vIMG" src={clickHere} alt="404"></img><p className="vText">Blog#1</p></div>
-        	<div onClick={() => window.open(data.length > 0 ? (data[0].link_to_blog.length >= 500 ? data[0].link_to_blog.slice(0, 120) : data[0].link_to_blog) : "info not found", "_blank")} id="blog8" className="cV"><img className="vIMG" src={clickHere} alt="404"></img><p className="vText">Blog#1</p></div>
-        	<div onClick={() => window.open(data.length > 0 ? (data[0].link_to_blog.length >= 500 ? data[0].link_to_blog.slice(0, 120) : data[0].link_to_blog) : "info not found", "_blank")} id="blog8" className="cV"><img className="vIMG" src={clickHere} alt="404"></img><p className="vText">Blog#1</p></div>
-        	<div onClick={() => window.open(data.length > 0 ? (data[0].link_to_blog.length >= 500 ? data[0].link_to_blog.slice(0, 120) : data[0].link_to_blog) : "info not found", "_blank")} id="blog8" className="cV"><img className="vIMG" src={clickHere} alt="404"></img><p className="vText">Blog#1</p></div>
-        	<div onClick={() => window.open(data.length > 0 ? (data[0].link_to_blog.length >= 500 ? data[0].link_to_blog.slice(149, 223) : data[0].link_to_blog) : "info not found", "_blank")} id="blog8" className="cV"><img className="vIMG" src={clickHere} alt="404"></img><p className="vText">Blog#3</p></div>
-        	<div onClick={() => window.open(data.length > 0 ? (data[0].link_to_blog.length >= 500 ? data[0].link_to_blog.slice(75, 148) : data[0].link_to_blog) : "info not found", "_blank")} id="blog8" className="cV"><img className="vIMG" src={clickHere} alt="404"></img><p className="vText">Blog#2{data.length > 0 ? (data[0].link_to_blog.length >= 500 ? data[0].link_to_blog.slice(75, 148) : data[0].link_to_blog) : "info not found"}</p></div>
-        	<div onClick={() => window.open(data.length > 0 ? (data[0].link_to_blog.length >= 500 ? data[0].link_to_blog.slice(0, 73) : data[0].link_to_blog) : "info not found", "_blank")} id="blog8" className="cV"><img className="vIMG" src={clickHere} alt="404"></img><p className="vText">Blog#1{data.length > 0 ? (data[0].link_to_blog.length >= 500 ? data[0].link_to_blog.slice(0, 73) : data[0].link_to_blog) : "info not found"}</p></div>
+        	<div id="blog2" className="cV"><img className="vIMG" src={clickHere} alt="404"></img><p id="containerId" className="vText">Blog#2</p></div>
       	</section>
       	<section className="mainC3">
         	<h1 className="mainCTitles">proof</h1>
