@@ -78,7 +78,7 @@ function blogs() {
 export function Skills() {
 	const [data, setData] = useState([]);
         useEffect(()=> {
-                fetch("http://localhost:3307/data")
+                fetch("http://localhost:3308/data")
                 .then(res => res.json())
                 .then(data => setData(data))
                 .catch(err => console.log(err));

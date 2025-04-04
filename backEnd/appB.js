@@ -1,18 +1,26 @@
 const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
+const fs = require('fs');
+const ini = require('ini');
+const path = require('path');
+
+const myCnfPath = path.join(process.env.HOME, '.my.cnf');
+const config = ini.parse(fs.readFileSync(myCnfPath, 'utf-8'));
 
 // Middleware
 const app = express();
 app.use(cors());
 
 // MySQL connection
-const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'leecash',
-  password: '',
+const dbConfig = {
+  host: config.client.host || 'localhost',
+  user: config.client.user,
+  password: config.client.password || '',
   database: 'pInfo',
-});
+};
+
+const db = mysql.createConnection(dbConfig);
 
 db.connect((err) => {
   if (err) {
@@ -53,6 +61,6 @@ app.get('/data', (req, res) => {
 });
 
 // Start the server
-app.listen(3307, () => {
+app.listen(3308, () => {
   console.log(`Server running on http://localhost:3307`);
 });
